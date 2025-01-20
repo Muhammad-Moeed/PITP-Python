@@ -1,7 +1,7 @@
 #Compriison Operator
 #Logocal (And or Not) Opearor
 # Indentity operator(is or is not)
-# Membership Opearator(in or innot)
+# Membership Opearator(in or innot) 
 
 # Task 1  Formula : (a+b)**2
 
