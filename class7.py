@@ -119,3 +119,30 @@ employee.update({
 employee['102']['Sallery'] = ['10lac']
 print("Dept of 101 : ", employee['101']['Dept'])
 print(employee)
+
+
+# Task 3 : 
+# Following dictnoray shows weakly sales of a asmartphones shopkeeper
+# Calaclulate total number of phones sales in weekscalculate of samsungand nokia 
+
+sales = {
+    'Monday': {'Samsung': 5, 'Nokia': 3, 'Apple': 2},
+    'Tuesday': {'Samsung': 7, 'Nokia': 4, 'Apple': 3},
+    'Wednesday': {'Samsung': 6, 'Nokia': 2, 'Apple': 1},
+    'Thursday': {'Samsung': 8, 'Nokia': 3, 'Apple': 4},
+    'Friday': {'Samsung': 4, 'Nokia': 5, 'Apple': 3},
+    'Saturday': {'Samsung': 10, 'Nokia': 6, 'Apple': 2},
+    'Sunday': {'Samsung': 9, 'Nokia': 4, 'Apple': 3}
+}
+
+# Calculate total sales for the week
+total_sales = sum(sum(day.values()) for day in sales.values())
+
+# Calculate total sales for Samsung and Nokia
+samsung_sales = sum(day.get('Samsung', 0) for day in sales.values())
+nokia_sales = sum(day.get('Nokia', 0) for day in sales.values())
+
+# Display the results
+print(f"Total phone sales in the week: {total_sales}")
+print(f"Total Samsung sales in the week: {samsung_sales}")
+print(f"Total Nokia sales in the week: {nokia_sales}")
