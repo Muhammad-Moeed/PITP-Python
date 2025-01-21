@@ -122,8 +122,9 @@ print(employee)
 
 
 # Task 3 : 
-# Following dictnoray shows weakly sales of a asmartphones shopkeeper
-# Calaclulate total number of phones sales in weekscalculate of samsungand nokia 
+# Following dictnoray shows weakly sales of a smartphones shopkeeper
+# Calaclulate total number of phones sales in weaks 
+# Calculate of samsung and nokia 
 
 sales = {
     'Monday': {'Samsung': 5, 'Nokia': 3, 'Apple': 2},
