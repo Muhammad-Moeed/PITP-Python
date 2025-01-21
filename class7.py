@@ -136,14 +136,31 @@ sales = {
     'Sunday': {'Samsung': 9, 'Nokia': 4, 'Apple': 3}
 }
 
-# Calculate total sales for the week
-total_sales = sum(sum(day.values()) for day in sales.values())
+# Total sales 
+total_sales = (
+    sales['Monday']['Samsung'] + sales['Monday']['Nokia'] + sales['Monday']['Apple'] +
+    sales['Tuesday']['Samsung'] + sales['Tuesday']['Nokia'] + sales['Tuesday']['Apple'] +
+    sales['Wednesday']['Samsung'] + sales['Wednesday']['Nokia'] + sales['Wednesday']['Apple'] +
+    sales['Thursday']['Samsung'] + sales['Thursday']['Nokia'] + sales['Thursday']['Apple'] +
+    sales['Friday']['Samsung'] + sales['Friday']['Nokia'] + sales['Friday']['Apple'] +
+    sales['Saturday']['Samsung'] + sales['Saturday']['Nokia'] + sales['Saturday']['Apple'] +
+    sales['Sunday']['Samsung'] + sales['Sunday']['Nokia'] + sales['Sunday']['Apple']
+)
 
-# Calculate total sales for Samsung and Nokia
-samsung_sales = sum(day.get('Samsung', 0) for day in sales.values())
-nokia_sales = sum(day.get('Nokia', 0) for day in sales.values())
+# Samsung aur Nokia total sales
+samsung_sales = (
+    sales['Monday']['Samsung'] + sales['Tuesday']['Samsung'] + sales['Wednesday']['Samsung'] +
+    sales['Thursday']['Samsung'] + sales['Friday']['Samsung'] + sales['Saturday']['Samsung'] +
+    sales['Sunday']['Samsung']
+)
 
-# Display the results
-print(f"Total phone sales in the week: {total_sales}")
-print(f"Total Samsung sales in the week: {samsung_sales}")
-print(f"Total Nokia sales in the week: {nokia_sales}")
+nokia_sales = (
+    sales['Monday']['Nokia'] + sales['Tuesday']['Nokia'] + sales['Wednesday']['Nokia'] +
+    sales['Thursday']['Nokia'] + sales['Friday']['Nokia'] + sales['Saturday']['Nokia'] +
+    sales['Sunday']['Nokia']
+)
+
+print("Total phone sales in the week:", total_sales)
+print("Total Samsung sales in the week:", samsung_sales)
+print("Total Nokia sales in the week:", nokia_sales)
+
